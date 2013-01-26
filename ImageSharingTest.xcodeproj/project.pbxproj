@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C72701A116B3808C0015C481 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72701A016B3808C0015C481 /* Cocoa.framework */; };
+		C72701AB16B3808C0015C481 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C72701A916B3808C0015C481 /* InfoPlist.strings */; };
+		C72701AD16B3808C0015C481 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C72701AC16B3808C0015C481 /* main.m */; };
+		C72701B116B3808C0015C481 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C72701AF16B3808C0015C481 /* Credits.rtf */; };
+		C72701B416B3808C0015C481 /* ISTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C72701B316B3808C0015C481 /* ISTAppDelegate.m */; };
+		C72701B716B3808C0015C481 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C72701B516B3808C0015C481 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C727019D16B3808C0015C481 /* ImageSharingTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageSharingTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C72701A016B3808C0015C481 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C72701A316B3808C0015C481 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		C72701A416B3808C0015C481 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C72701A516B3808C0015C481 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C72701A816B3808C0015C481 /* ImageSharingTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImageSharingTest-Info.plist"; sourceTree = "<group>"; };
+		C72701AA16B3808C0015C481 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C72701AC16B3808C0015C481 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C72701AE16B3808C0015C481 /* ImageSharingTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageSharingTest-Prefix.pch"; sourceTree = "<group>"; };
+		C72701B016B3808C0015C481 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		C72701B216B3808C0015C481 /* ISTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISTAppDelegate.h; sourceTree = "<group>"; };
+		C72701B316B3808C0015C481 /* ISTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISTAppDelegate.m; sourceTree = "<group>"; };
+		C72701B616B3808C0015C481 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C727019A16B3808C0015C481 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C72701A116B3808C0015C481 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C727019416B3808C0015C481 = {
+			isa = PBXGroup;
+			children = (
+				C72701A616B3808C0015C481 /* ImageSharingTest */,
+				C727019F16B3808C0015C481 /* Frameworks */,
+				C727019E16B3808C0015C481 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C727019E16B3808C0015C481 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C727019D16B3808C0015C481 /* ImageSharingTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C727019F16B3808C0015C481 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C72701A016B3808C0015C481 /* Cocoa.framework */,
+				C72701A216B3808C0015C481 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C72701A216B3808C0015C481 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C72701A316B3808C0015C481 /* AppKit.framework */,
+				C72701A416B3808C0015C481 /* CoreData.framework */,
+				C72701A516B3808C0015C481 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		C72701A616B3808C0015C481 /* ImageSharingTest */ = {
+			isa = PBXGroup;
+			children = (
+				C72701B216B3808C0015C481 /* ISTAppDelegate.h */,
+				C72701B316B3808C0015C481 /* ISTAppDelegate.m */,
+				C72701B516B3808C0015C481 /* MainMenu.xib */,
+				C72701A716B3808C0015C481 /* Supporting Files */,
+			);
+			path = ImageSharingTest;
+			sourceTree = "<group>";
+		};
+		C72701A716B3808C0015C481 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C72701A816B3808C0015C481 /* ImageSharingTest-Info.plist */,
+				C72701A916B3808C0015C481 /* InfoPlist.strings */,
+				C72701AC16B3808C0015C481 /* main.m */,
+				C72701AE16B3808C0015C481 /* ImageSharingTest-Prefix.pch */,
+				C72701AF16B3808C0015C481 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C727019C16B3808C0015C481 /* ImageSharingTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C72701BA16B3808C0015C481 /* Build configuration list for PBXNativeTarget "ImageSharingTest" */;
+			buildPhases = (
+				C727019916B3808C0015C481 /* Sources */,
+				C727019A16B3808C0015C481 /* Frameworks */,
+				C727019B16B3808C0015C481 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageSharingTest;
+			productName = ImageSharingTest;
+			productReference = C727019D16B3808C0015C481 /* ImageSharingTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C727019516B3808C0015C481 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = IST;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = PixelEspresso;
+			};
+			buildConfigurationList = C727019816B3808C0015C481 /* Build configuration list for PBXProject "ImageSharingTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C727019416B3808C0015C481;
+			productRefGroup = C727019E16B3808C0015C481 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C727019C16B3808C0015C481 /* ImageSharingTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C727019B16B3808C0015C481 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C72701AB16B3808C0015C481 /* InfoPlist.strings in Resources */,
+				C72701B116B3808C0015C481 /* Credits.rtf in Resources */,
+				C72701B716B3808C0015C481 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C727019916B3808C0015C481 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C72701AD16B3808C0015C481 /* main.m in Sources */,
+				C72701B416B3808C0015C481 /* ISTAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C72701A916B3808C0015C481 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C72701AA16B3808C0015C481 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C72701AF16B3808C0015C481 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C72701B016B3808C0015C481 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		C72701B516B3808C0015C481 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C72701B616B3808C0015C481 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C72701B816B3808C0015C481 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C72701B916B3808C0015C481 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C72701BB16B3808C0015C481 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageSharingTest/ImageSharingTest-Prefix.pch";
+				INFOPLIST_FILE = "ImageSharingTest/ImageSharingTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C72701BC16B3808C0015C481 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageSharingTest/ImageSharingTest-Prefix.pch";
+				INFOPLIST_FILE = "ImageSharingTest/ImageSharingTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C727019816B3808C0015C481 /* Build configuration list for PBXProject "ImageSharingTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C72701B816B3808C0015C481 /* Debug */,
+				C72701B916B3808C0015C481 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C72701BA16B3808C0015C481 /* Build configuration list for PBXNativeTarget "ImageSharingTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C72701BB16B3808C0015C481 /* Debug */,
+				C72701BC16B3808C0015C481 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C727019516B3808C0015C481 /* Project object */;
+}
