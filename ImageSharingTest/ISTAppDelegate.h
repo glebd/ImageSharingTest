@@ -8,16 +8,16 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ISTAppDelegate : NSObject <NSApplicationDelegate>
+@interface ISTAppDelegate : NSObject <NSApplicationDelegate, NSSharingServicePickerDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSImageView *imageView;
-@property (weak) IBOutlet NSButton *shareUsingTempFileButton;
 
 @property (strong) NSString *imagePath;
 
 - (IBAction)chooseImage:(id)sender;
 
+- (IBAction)shareImage:(id)sender;
 - (IBAction)shareUsingTempFile:(id)sender;
 
 @end

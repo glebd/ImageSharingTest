@@ -28,6 +28,13 @@
 	}];
 }
 
+// share NSImage from the image view
+- (IBAction)shareImage:(id)sender {
+	NSSharingServicePicker *picker = [[NSSharingServicePicker alloc] initWithItems:@[self.imageView.image]];
+	picker.delegate = self;
+	[picker showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMinYEdge];
+}
+
 - (IBAction)shareUsingTempFile:(id)sender {
 
 }
