@@ -32,8 +32,11 @@
 	[picker showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMinYEdge];
 }
 
-- (IBAction)shareUsingTempFile:(id)sender {
-
+- (IBAction)shareUsingFileURL:(id)sender {
+	NSURL *fileURL = [NSURL fileURLWithPath:self.imagePath];
+	NSSharingServicePicker *picker = [[NSSharingServicePicker alloc] initWithItems:@[fileURL]];
+	picker.delegate = self;
+	[picker showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMinYEdge];
 }
 
 @end

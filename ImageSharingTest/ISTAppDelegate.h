@@ -18,6 +18,6 @@
 - (IBAction)chooseImage:(id)sender;
 
 - (IBAction)shareImage:(id)sender;
-- (IBAction)shareUsingTempFile:(id)sender;
+- (IBAction)shareUsingFileURL:(id)sender;
 
 @end
