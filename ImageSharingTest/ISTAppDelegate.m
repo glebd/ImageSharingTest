@@ -10,9 +10,15 @@
 
 @implementation ISTAppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-	// Insert code here to initialize your application
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+}
+
+- (IBAction)chooseImage:(id)sender {
+
+}
+
+- (IBAction)shareUsingTempFile:(id)sender {
+
 }
 
 @end
