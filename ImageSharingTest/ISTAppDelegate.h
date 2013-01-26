@@ -19,5 +19,6 @@
 
 - (IBAction)shareImage:(id)sender;
 - (IBAction)shareUsingFileURL:(id)sender;
+- (IBAction)shareUsingAttachment:(id)sender;
 
 @end

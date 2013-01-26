@@ -25,18 +25,44 @@
 	}];
 }
 
-// share NSImage from the image view
+#pragma mark - Actions
+
+// share NSImage from the image view => GIF animation is lost
 - (IBAction)shareImage:(id)sender {
 	NSSharingServicePicker *picker = [[NSSharingServicePicker alloc] initWithItems:@[self.imageView.image]];
 	picker.delegate = self;
 	[picker showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMinYEdge];
 }
 
+// share using file URL => GIF animation is preserved, but a file is necessary
 - (IBAction)shareUsingFileURL:(id)sender {
 	NSURL *fileURL = [NSURL fileURLWithPath:self.imagePath];
 	NSSharingServicePicker *picker = [[NSSharingServicePicker alloc] initWithItems:@[fileURL]];
 	picker.delegate = self;
 	[picker showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMinYEdge];
+}
+
+// share using attachment to an attributed string => GIF animation is lost
+- (IBAction)shareUsingAttachment:(id)sender {
+	NSAttributedString *attributedString = [self getImageAsAttachment];
+	NSSharingServicePicker *picker = [[NSSharingServicePicker alloc] initWithItems:@[attributedString]];
+	picker.delegate = self;
+	[picker showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMinYEdge];
+}
+
+#pragma mark - Implementation
+
+- (NSData *)getImageData {
+	return [NSData dataWithContentsOfFile:self.imagePath];
+}
+
+- (NSAttributedString *)getImageAsAttachment {
+	NSData *imageData = [self getImageData];
+	NSFileWrapper *fileWrapper = [[NSFileWrapper alloc] initRegularFileWithContents:imageData];
+	[fileWrapper setPreferredFilename:[self.imagePath lastPathComponent]];
+	NSTextAttachment *attachment = [[NSTextAttachment alloc] initWithFileWrapper:fileWrapper];
+	NSAttributedString *str = [NSAttributedString attributedStringWithAttachment:attachment];
+	return str;
 }
 
 @end
