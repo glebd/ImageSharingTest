@@ -10,9 +10,6 @@
 
 @implementation ISTAppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-}
-
 - (IBAction)chooseImage:(id)sender {
 	NSOpenPanel *openPanel = [[NSOpenPanel alloc] init];
 	[openPanel setCanChooseFiles:YES];
