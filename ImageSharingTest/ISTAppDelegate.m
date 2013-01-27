@@ -69,7 +69,7 @@
 }
 
 // copies data using attributed string with image attachment as RTFD => animation is preserved
-- (IBAction)copyUsingAttributedString:(id)sender {
+- (IBAction)copyUsingRTFD:(id)sender {
 	NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
 	NSAttributedString *attributedString = [self getImageAsAttachment];
 	NSData *data = [attributedString RTFDFromRange:NSMakeRange(0, [attributedString length]) documentAttributes:nil];
