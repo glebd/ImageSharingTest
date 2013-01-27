@@ -27,14 +27,24 @@
 
 #pragma mark - Actions
 
-// share NSImage from the image view => GIF animation is lost
+// shares NSImage from the image view => GIF animation is lost
 - (IBAction)shareImage:(id)sender {
 	NSSharingServicePicker *picker = [[NSSharingServicePicker alloc] initWithItems:@[self.imageView.image]];
 	picker.delegate = self;
 	[picker showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMinYEdge];
 }
 
-// share using file URL => GIF animation is preserved, but a file is necessary
+// copies image raw data determining image type from file extension => GIF animation is lost
+- (IBAction)copyImage:(id)sender {
+	NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
+	NSData *imageData = [self getImageData];
+	NSString *ext = [self.imagePath pathExtension];
+	NSString *uti = (__bridge NSString *)UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, (__bridge CFStringRef)ext, NULL);
+	[pasteboard declareTypes:@[uti] owner:nil];
+	[pasteboard setData:imageData forType:uti];
+}
+
+// shares using file URL => GIF animation is preserved, but a file is necessary
 - (IBAction)shareUsingFileURL:(id)sender {
 	NSURL *fileURL = [NSURL fileURLWithPath:self.imagePath];
 	NSSharingServicePicker *picker = [[NSSharingServicePicker alloc] initWithItems:@[fileURL]];
@@ -42,7 +52,7 @@
 	[picker showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMinYEdge];
 }
 
-// share using attachment to an attributed string => GIF animation is lost
+// shares using attachment to an attributed string => GIF animation is lost
 - (IBAction)shareUsingAttachment:(id)sender {
 	NSAttributedString *attributedString = [self getImageAsAttachment];
 	NSSharingServicePicker *picker = [[NSSharingServicePicker alloc] initWithItems:@[attributedString]];

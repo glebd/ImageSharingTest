@@ -18,6 +18,7 @@
 - (IBAction)chooseImage:(id)sender;
 
 - (IBAction)shareImage:(id)sender;
+- (IBAction)copyImage:(id)sender;
 - (IBAction)shareUsingFileURL:(id)sender;
 - (IBAction)shareUsingAttachment:(id)sender;
 
