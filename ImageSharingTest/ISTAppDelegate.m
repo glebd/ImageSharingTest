@@ -34,7 +34,7 @@
 	[picker showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMinYEdge];
 }
 
-// copies image raw data determining image type from file extension => GIF animation is lost
+// copies image raw data to pasteboard, determining image type from file extension => GIF animation is lost
 - (IBAction)copyImage:(id)sender {
 	NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
 	NSData *imageData = [self getImageData];
@@ -50,6 +50,14 @@
 	NSSharingServicePicker *picker = [[NSSharingServicePicker alloc] initWithItems:@[fileURL]];
 	picker.delegate = self;
 	[picker showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMinYEdge];
+}
+
+// copies file URL to pasteboard => GIF animation is preserved
+- (IBAction)copyUsingFileURL:(id)sender {
+	NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
+	NSURL *fileURL = [NSURL fileURLWithPath:self.imagePath];
+	[pasteboard declareTypes:@[NSFilenamesPboardType] owner:nil];
+	[pasteboard writeObjects:@[fileURL]];
 }
 
 // shares using attachment to an attributed string => GIF animation is lost

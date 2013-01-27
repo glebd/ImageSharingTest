@@ -20,6 +20,7 @@
 - (IBAction)shareImage:(id)sender;
 - (IBAction)copyImage:(id)sender;
 - (IBAction)shareUsingFileURL:(id)sender;
+- (IBAction)copyUsingFileURL:(id)sender;
 - (IBAction)shareUsingAttachment:(id)sender;
 
 @end
