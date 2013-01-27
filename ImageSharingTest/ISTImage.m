@@ -10,4 +10,12 @@
 
 @implementation ISTImage
 
+- (NSArray *)writableTypesForPasteboard:(NSPasteboard *)pasteboard {
+	return nil;
+}
+
+- (id)pasteboardPropertyListForType:(NSString *)type {
+	return nil;
+}
+
 @end

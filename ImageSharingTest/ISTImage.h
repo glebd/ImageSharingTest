@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ISTImage : NSObject
+@interface ISTImage : NSObject <NSPasteboardWriting>
+
+@property (strong) NSData *imageData;
 
 @end
