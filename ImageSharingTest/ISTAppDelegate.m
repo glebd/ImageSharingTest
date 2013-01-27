@@ -61,11 +61,20 @@
 }
 
 // shares using attachment to an attributed string => GIF animation is lost
-- (IBAction)shareUsingAttachment:(id)sender {
+- (IBAction)shareUsingAttributedString:(id)sender {
 	NSAttributedString *attributedString = [self getImageAsAttachment];
 	NSSharingServicePicker *picker = [[NSSharingServicePicker alloc] initWithItems:@[attributedString]];
 	picker.delegate = self;
 	[picker showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMinYEdge];
+}
+
+// copies data using attributed string with image attachment as RTFD => animation is preserved
+- (IBAction)copyUsingAttributedString:(id)sender {
+	NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
+	NSAttributedString *attributedString = [self getImageAsAttachment];
+	NSData *data = [attributedString RTFDFromRange:NSMakeRange(0, [attributedString length]) documentAttributes:nil];
+	[pasteboard declareTypes:@[NSRTFDPboardType] owner:nil];
+	[pasteboard setData:data forType:NSRTFDPboardType];
 }
 
 #pragma mark - Implementation

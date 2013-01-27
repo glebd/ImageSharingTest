@@ -21,6 +21,7 @@
 - (IBAction)copyImage:(id)sender;
 - (IBAction)shareUsingFileURL:(id)sender;
 - (IBAction)copyUsingFileURL:(id)sender;
-- (IBAction)shareUsingAttachment:(id)sender;
+- (IBAction)shareUsingAttributedString:(id)sender;
+- (IBAction)copyUsingAttributedString:(id)sender;
 
 @end
