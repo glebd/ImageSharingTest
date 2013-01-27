@@ -13,6 +13,7 @@
 		C72701B116B3808C0015C481 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C72701AF16B3808C0015C481 /* Credits.rtf */; };
 		C72701B416B3808C0015C481 /* ISTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C72701B316B3808C0015C481 /* ISTAppDelegate.m */; };
 		C72701B716B3808C0015C481 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C72701B516B3808C0015C481 /* MainMenu.xib */; };
+		C76FCDB316B5DFBD00143D6A /* ISTImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C76FCDB216B5DFBD00143D6A /* ISTImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		C72701B216B3808C0015C481 /* ISTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISTAppDelegate.h; sourceTree = "<group>"; };
 		C72701B316B3808C0015C481 /* ISTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISTAppDelegate.m; sourceTree = "<group>"; };
 		C72701B616B3808C0015C481 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C76FCDB116B5DFBD00143D6A /* ISTImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISTImage.h; sourceTree = "<group>"; };
+		C76FCDB216B5DFBD00143D6A /* ISTImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISTImage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				C72701B316B3808C0015C481 /* ISTAppDelegate.m */,
 				C72701B516B3808C0015C481 /* MainMenu.xib */,
 				C72701A716B3808C0015C481 /* Supporting Files */,
+				C76FCDB116B5DFBD00143D6A /* ISTImage.h */,
+				C76FCDB216B5DFBD00143D6A /* ISTImage.m */,
 			);
 			path = ImageSharingTest;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 			files = (
 				C72701AD16B3808C0015C481 /* main.m in Sources */,
 				C72701B416B3808C0015C481 /* ISTAppDelegate.m in Sources */,
+				C76FCDB316B5DFBD00143D6A /* ISTImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +310,7 @@
 				C72701BC16B3808C0015C481 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
