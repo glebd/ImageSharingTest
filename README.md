@@ -54,7 +54,7 @@ The app targets Mac OS X Mountain Lion 10.8 and uses ARC.
 
 ## Me
 
-I'm Gleb Dolgich, @glebd on Twitter and ADN. I program for Mac OS X and iOS in my spare time. My website is [PixelEspresso](http://pixelespressoapps.com).
+I'm Gleb Dolgich, @glebd on Twitter and ADN. I program for Mac OS X and iOS in my spare time. My website is [PixelEspressoApps](http://pixelespressoapps.com).
 
 # Licence
 
