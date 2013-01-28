@@ -7,6 +7,7 @@
 //
 
 #import "ISTAppDelegate.h"
+#import "ISTImage.h"
 
 @implementation ISTAppDelegate
 
@@ -67,6 +68,17 @@
 	picker.delegate = self;
 	[picker showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMinYEdge];
 }
+
+- (IBAction)shareUsingISTImage:(id)sender {
+
+}
+
+- (IBAction)copyUsingISTImage:(id)sender {
+	NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
+	ISTImage *image = [[ISTImage alloc] initWithFilePath:self.imagePath];
+	[image copyToPasteboard:pasteboard];
+}
+
 
 // copies data using attributed string with image attachment as RTFD => animation is preserved
 - (IBAction)copyUsingRTFD:(id)sender {

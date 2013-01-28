@@ -10,6 +10,13 @@
 
 @interface ISTImage : NSObject <NSPasteboardWriting>
 
+@property (strong) NSString *filePath;
 @property (strong) NSData *imageData;
 
+- (instancetype)initWithFilePath:(NSString *)filePath;
+- (void)copyToPasteboard:(NSPasteboard *)pasteboard;
+- (NSData *)getDataAsRTFD;
+
 @end
+
+extern NSString *kISTImagePasteboardType;

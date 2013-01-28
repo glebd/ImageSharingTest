@@ -22,6 +22,7 @@
 - (IBAction)shareUsingFileURL:(id)sender;
 - (IBAction)copyUsingFileURL:(id)sender;
 - (IBAction)shareUsingAttributedString:(id)sender;
-- (IBAction)copyUsingRTFD:(id)sender;
+- (IBAction)shareUsingISTImage:(id)sender;
+- (IBAction)copyUsingISTImage:(id)sender;
 
 @end
