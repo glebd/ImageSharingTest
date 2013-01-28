@@ -76,10 +76,17 @@
 	[picker showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMinYEdge];
 }
 
+// copy custom class image data as RFTD => animation is preserved
 - (IBAction)copyUsingISTImage:(id)sender {
 	NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
 	ISTImage *image = [[ISTImage alloc] initWithFilePath:self.imagePath];
-	[image copyToPasteboard:pasteboard];
+	// Declare custom pasteboard data type that we own
+	[pasteboard declareTypes:@[kISTImagePasteboardType] owner:nil];
+	// use ISTImage's support for <NSPasteboardWriting> protocol
+	if (![pasteboard writeObjects:@[image]]) {
+		NSBeep();
+		NSLog(@"Unable to write %@ to pasteboard", image);
+	}
 }
 
 // copies data using attributed string with image attachment as RTFD => animation is preserved
