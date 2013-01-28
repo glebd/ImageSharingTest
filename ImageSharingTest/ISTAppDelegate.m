@@ -70,7 +70,10 @@
 }
 
 - (IBAction)shareUsingISTImage:(id)sender {
-
+	ISTImage *image = [[ISTImage alloc] initWithFilePath:self.imagePath];
+	NSSharingServicePicker *picker = [[NSSharingServicePicker alloc] initWithItems:@[image]];
+	picker.delegate = self;
+	[picker showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMinYEdge];
 }
 
 - (IBAction)copyUsingISTImage:(id)sender {
