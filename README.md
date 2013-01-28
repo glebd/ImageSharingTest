@@ -10,11 +10,13 @@ While developing my new app I discovered that sharing of an `NSImage` containing
 
 The code is quite simple, really:
 
-	- (IBAction)shareImage:(id)sender {
-		NSSharingServicePicker *picker = [[NSSharingServicePicker alloc] initWithItems:@[self.imageView.image]];
-		picker.delegate = self;
-		[picker showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMinYEdge];
-	}
+```
+- (IBAction)shareImage:(id)sender {
+	NSSharingServicePicker *picker = [[NSSharingServicePicker alloc] initWithItems:@[self.imageView.image]];
+	picker.delegate = self;
+	[picker showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMinYEdge];
+}
+```
 
 The system displays a popup menu populated with available sharing services (Twitter, Messages, Facebook, and the like). When you choose a service, the system displays a UI to create a new post or message and attaches whatever you are sharing to it.
 
