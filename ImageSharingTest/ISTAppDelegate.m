@@ -79,7 +79,6 @@
 	[image copyToPasteboard:pasteboard];
 }
 
-
 // copies data using attributed string with image attachment as RTFD => animation is preserved
 - (IBAction)copyUsingRTFD:(id)sender {
 	NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
