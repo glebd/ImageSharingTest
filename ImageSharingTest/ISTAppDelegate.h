@@ -12,6 +12,11 @@
 
 @property (assign) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSImageView *imageView;
+@property (weak) IBOutlet NSButton *shareImageButton;
+@property (weak) IBOutlet NSButton *shareFileURLButton;
+@property (weak) IBOutlet NSButton *shareNSAttributedStringButton;
+@property (weak) IBOutlet NSButton *shareISTImageButton;
+@property (weak) IBOutlet NSButton *sharePasteboardItemButton;
 
 @property (strong) NSString *imagePath;
 
@@ -24,5 +29,7 @@
 - (IBAction)shareUsingAttributedString:(id)sender;
 - (IBAction)shareUsingISTImage:(id)sender;
 - (IBAction)copyUsingISTImage:(id)sender;
+- (IBAction)shareUsingNSPasteboardItem:(id)sender;
+- (IBAction)copyUsingNSPasteboardItem:(id)sender;
 
 @end

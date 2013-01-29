@@ -11,6 +11,18 @@
 
 @implementation ISTAppDelegate
 
+#pragma mark - Lifecycle
+
+- (void)awakeFromNib {
+	[self.shareImageButton sendActionOn:NSLeftMouseDownMask];
+	[self.shareFileURLButton sendActionOn:NSLeftMouseDownMask];
+	[self.shareNSAttributedStringButton sendActionOn:NSLeftMouseDownMask];
+	[self.shareISTImageButton sendActionOn:NSLeftMouseDownMask];
+	[self.sharePasteboardItemButton sendActionOn:NSLeftMouseDownMask];
+}
+
+#pragma mark - Actions
+
 - (IBAction)chooseImage:(id)sender {
 	NSOpenPanel *openPanel = [[NSOpenPanel alloc] init];
 	[openPanel setCanChooseFiles:YES];
@@ -25,8 +37,6 @@
 		}
 	}];
 }
-
-#pragma mark - Actions
 
 // shares NSImage from the image view => GIF animation is lost
 - (IBAction)shareImage:(id)sender {
@@ -87,6 +97,12 @@
 		NSBeep();
 		NSLog(@"Unable to write %@ to pasteboard", image);
 	}
+}
+
+- (IBAction)shareUsingNSPasteboardItem:(id)sender {
+}
+
+- (IBAction)copyUsingNSPasteboardItem:(id)sender {
 }
 
 // copies data using attributed string with image attachment as RTFD => animation is preserved
