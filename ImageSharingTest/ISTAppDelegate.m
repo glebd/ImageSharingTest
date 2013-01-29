@@ -100,9 +100,22 @@
 }
 
 - (IBAction)shareUsingNSPasteboardItem:(id)sender {
+	ISTImage *image = [[ISTImage alloc] initWithFilePath:self.imagePath];
+	NSPasteboardItem *item = [image pasteboardItem];
+	NSSharingServicePicker *picker = [[NSSharingServicePicker alloc] initWithItems:@[item]];
+	picker.delegate = self;
+	[picker showRelativeToRect:[sender bounds] ofView:sender preferredEdge:NSMinYEdge];
 }
 
 - (IBAction)copyUsingNSPasteboardItem:(id)sender {
+	NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
+	ISTImage *image = [[ISTImage alloc] initWithFilePath:self.imagePath];
+	NSPasteboardItem *item = [image pasteboardItem];
+	[pasteboard declareTypes:@[NSRTFDPboardType] owner:nil];
+	if (![pasteboard writeObjects:@[item]]) {
+		NSBeep();
+		NSLog(@"Unable to write %@ to pasteboard", image);
+	}
 }
 
 // copies data using attributed string with image attachment as RTFD => animation is preserved

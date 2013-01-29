@@ -16,6 +16,7 @@
 - (instancetype)initWithFilePath:(NSString *)filePath;
 - (void)copyToPasteboard:(NSPasteboard *)pasteboard;
 - (NSData *)getDataAsRTFD;
+- (NSPasteboardItem *)pasteboardItem;
 
 @end
 

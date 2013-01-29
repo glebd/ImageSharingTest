@@ -61,4 +61,10 @@ NSString *kISTImagePasteboardType = @"com.pixelespresso.ISTImage";
 	return data;
 }
 
+- (NSPasteboardItem *)pasteboardItem {
+	NSPasteboardItem *item = [[NSPasteboardItem alloc] init];
+	[item setData:[self getDataAsRTFD] forType:(NSString *)kUTTypeFlatRTFD];
+	return item;
+}
+
 @end
