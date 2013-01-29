@@ -36,6 +36,15 @@ NSString *kISTImagePasteboardType = @"com.pixelespresso.ISTImage";
 	return [self getDataAsRTFD];
 }
 
+#pragma mark - <NSPasteboardReading>
+
++ (NSArray *)readableTypesForPasteboard:(NSPasteboard *)pasteboard {
+	NSString *typeIdentifier = (__bridge NSString *)UTTypeCreatePreferredIdentifierForTag(kUTTagClassNSPboardType, (__bridge CFStringRef)NSRTFDPboardType, NULL);
+	NSArray *types = @[typeIdentifier];
+	NSLog(@"Called %s, returning types: %@", __PRETTY_FUNCTION__, types);
+	return types;
+}
+
 #pragma mark - API
 
 - (void)copyToPasteboard:(NSPasteboard *)pasteboard {
